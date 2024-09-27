@@ -30,6 +30,9 @@ app.use("/api", userRouter)
 app.use('/api/categories', categoryRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/', (req, res)=>{
+    res.send('welcome')
+})
 
 // Set up GraphQL endpoint
 app.use(
